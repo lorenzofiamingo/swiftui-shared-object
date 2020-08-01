@@ -21,6 +21,11 @@ public struct SharedObject<ObjectType, ID>: DynamicProperty where ObjectType: Ob
 		nonmutating set { object.object = newValue }
 	}
 	
+	/// A projection of the shared object that creates bindings to its properties using dynamic member lookup.
+	public var projectedValue: SharedObject.Wrapper {
+		.init(object.object)
+	}
+	
 	/// Retrieves the shared object with the given id or creates a shared object with an initial wrapped value.
 	public init(wrappedValue: ObjectType, _ id: ID) {
 		object = .init(wrappedValue: wrappedValue, id: id)
@@ -50,6 +55,25 @@ public struct SharedObject<ObjectType, ID>: DynamicProperty where ObjectType: Ob
 		private func subscribe() {
 			cancellable = object.objectWillChange.sink { [unowned self] _ in
 				self.objectWillChange.send()
+			}
+		}
+	}
+	
+	/// A wrapper of the underlying observable object that can create bindings to its properties using dynamic member lookup.
+	@dynamicMemberLookup
+	public struct Wrapper {
+		
+		private let object: ObjectType
+		
+		init(_ object: ObjectType) {
+			self.object = object
+		}
+		
+		subscript<Subject>(dynamicMember keyPath: ReferenceWritableKeyPath<ObjectType, Subject>) -> Binding<Subject> {
+			.init {
+				object[keyPath: keyPath]
+			} set: { newValue in
+				object[keyPath: keyPath] = newValue
 			}
 		}
 	}

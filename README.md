@@ -36,3 +36,8 @@ final class Letter: SharableObject {
 1. In Xcode, open your project and navigate to **File** → **Swift Packages** → **Add Package Dependency...**
 2. Paste the repository URL (`https://github.com/lorenzofiamingo/SwiftUI-SharedObject`) and click **Next**.
 3. Click **Finish**.
+
+
+## Another projects
+
+[VerticalTabView 🔝](https://github.com/lorenzofiamingo/SwiftUI-VerticalTabView)

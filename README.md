@@ -1,6 +1,6 @@
 # SharedObject 🍱
 
-`@SharedObject` is an alternative way to `@StateObject`, `@ObservedObject`, `@EnvironmentObject` for handle `ObservableObject`.
+`@SharedObject` is an alternative to `@StateObject`, `@ObservedObject`, `@EnvironmentObject` to handle `ObservableObject`.
 If you need to have multiple objects of the same class persisted among multiple view instances, its difficult to handle the situation with other wrappers: with `@StateObject` the object will deinit with the view and be generated only for the specific view instance, with `@EnvironmentObject` you can bind only one instance of the same class for each Environment and with `@ObservedObject` is difficult to propagate object in nested views.
 
 `@SharedObject` simply stores the objects using an identifier, so you can retrieve it each time you'll need it.

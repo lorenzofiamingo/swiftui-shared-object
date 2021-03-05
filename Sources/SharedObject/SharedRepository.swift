@@ -12,7 +12,6 @@ final class SharedRepository {
 	private static var objects: [Int: Any] = [:]
 	
 	static func getObject<ObjectType>(for key: Int, defaultValue: ObjectType?) -> ObjectType {
-		print(type(of: defaultValue))
 		if objects[key] == nil {
 			guard let defaultValue = defaultValue else {
 				preconditionFailure("SharedObject Error: The object was called for the first time without being initialized")

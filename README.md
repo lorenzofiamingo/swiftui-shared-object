@@ -38,6 +38,8 @@ final class Letter: SharableObject {
 3. Click **Finish**.
 
 
-## Another projects
+## Other projects
+
+[CachedAsyncImage 🗃️](https://github.com/lorenzofiamingo/SwiftUI-CachedAsyncImage)
 
 [VerticalTabView 🔝](https://github.com/lorenzofiamingo/SwiftUI-VerticalTabView)

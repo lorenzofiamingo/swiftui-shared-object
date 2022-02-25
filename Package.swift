@@ -4,18 +4,17 @@
 import PackageDescription
 
 let package = Package(
-	name: "SharedObject",
+	name: "SwiftUI-SharedObject",
 	products: [
 		.library(
 			name: "SharedObject",
-			targets: ["SharedObject"]),
+			targets: ["SharedObject"])
 	],
 	targets: [
 		.target(
-			name: "SharedObject",
-			dependencies: []),
+			name: "SharedObject"),
 		.testTarget(
 			name: "SharedObjectTests",
-			dependencies: ["SharedObject"]),
+			dependencies: ["SharedObject"])
 	]
 )

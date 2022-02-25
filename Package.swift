@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUI-SharedObject",
+    name: "swiftui-shared-object",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
@@ -16,8 +16,7 @@ let package = Package(
             targets: ["SharedObject"])
     ],
     targets: [
-        .target(
-            name: "SharedObject"),
+        .target(name: "SharedObject"),
         .testTarget(
             name: "SharedObjectTests",
             dependencies: ["SharedObject"])

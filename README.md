@@ -1,4 +1,4 @@
-# SharedObject 🍱
+# SwiftUI SharedObject 🍱
 
 `@SharedObject` is an alternative to `@StateObject`, `@ObservedObject`, `@EnvironmentObject` to handle `ObservableObject`.
 If you need to have multiple objects of the same class persisted among multiple view instances, its difficult to handle the situation with other wrappers: with `@StateObject` the object will deinit with the view and be generated only for the specific view instance, with `@EnvironmentObject` you can bind only one instance of the same class for each Environment and with `@ObservedObject` is difficult to propagate object in nested views.
@@ -40,6 +40,10 @@ final class Letter: SharableObject {
 
 ## Other projects
 
-[CachedAsyncImage 🗃️](https://github.com/lorenzofiamingo/SwiftUI-CachedAsyncImage)
+[SwiftUI MapItemPicker 🗺️](https://github.com/lorenzofiamingo/SwiftUI-MapItemPicker)
 
-[VerticalTabView 🔝](https://github.com/lorenzofiamingo/SwiftUI-VerticalTabView)
+[SwiftUI PhotosPicker 🌇](https://github.com/lorenzofiamingo/SwiftUI-PhotosPicker)
+
+[SwiftUI CachedAsyncImage 🗃️](https://github.com/lorenzofiamingo/SwiftUI-CachedAsyncImage)
+
+[SwiftUI VerticalTabView 🔝](https://github.com/lorenzofiamingo/SwiftUI-VerticalTabView)
